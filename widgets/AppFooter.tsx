@@ -9,10 +9,10 @@ import Link from 'next/link'
 export default function AppFooter() {
   return (
     <footer
-      className='snap-always snap-start relative flex max-xl:flex-col gap-32 flex-col justify-end items-center w-full min-h-screen px-[189px] max-xl:px-6 py-16 max-xl:pt-26 max-xl:pb-6 bg-white text-black fill-black'
+      className='snap-always snap-start relative flex max-xl:flex-col gap-32 flex-col justify-end items-center w-full min-h-[100svh] px-[256px] max-xl:px-6 pt-40 max-xl:pt-[104px] pb-8 max-xl:pb-8 bg-white text-black fill-black'
       data-bg='light'
     >
-      <div className='flex flex-col gap-24 max-xl:gap-32 max-w-[1542px] w-full'>
+      <div className='flex flex-col gap-24 max-xl:gap-32 max-w-[1920px] w-full'>
         <div className='flex max-xl:flex-col gap-47.5 justify-between'>
           <div className='flex gap-24 flex-col'>
             <div className='flex max-xl:flex-col gap-47.5 max-xl:gap-16'>
@@ -86,7 +86,7 @@ export default function AppFooter() {
           </div>
         </div>
       </div>
-      <div className='flex max-xl:flex-col gap-8 justify-between items-center max-xl:items-start max-w-[1542px] w-full py-8 max-xl:py-0 border-t-solid max-xl:border-none border-t border-t-[#939393]'>
+      <div className='flex max-xl:flex-col gap-8 justify-between items-center max-xl:items-start max-w-[1920px] w-full py-8 max-xl:py-0 border-t-solid max-xl:border-none border-t border-t-[#939393]'>
         <Button
           href='/'
           filled={false}

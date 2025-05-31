@@ -11,8 +11,7 @@ import { useEffect, useState } from 'react'
 import AlignCenterIcon from '@/public/icons/x28/align-center.svg'
 
 function useBackgroundColor() {
-  const defaultBackground = 'light'
-  const [background, setBackground] = useState<'light' | 'dark'>(defaultBackground)
+  const [background, setBackground] = useState<'light' | 'dark'>('dark')
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -25,14 +24,14 @@ function useBackgroundColor() {
             visibleHeight: Math.max(
               0,
               Math.min(window.innerHeight, e.boundingClientRect.bottom) -
-                Math.max(0, e.boundingClientRect.top)
+              Math.max(0, e.boundingClientRect.top)
             ),
           }))
           .sort((a, b) => a.top - b.top)[0]
 
         if (visible) {
           const attr = visible.target.getAttribute('data-bg')
-          setBackground(attr === 'dark' || attr === 'light' ? attr : defaultBackground)
+          setBackground(attr === 'dark' || attr === 'light' ? attr : 'dark')
         }
       },
       {
@@ -64,7 +63,7 @@ function useBackgroundColor() {
 
       if (visible) {
         const attr = visible.target.getAttribute('data-bg')
-        setBackground(attr === 'dark' || attr === 'light' ? attr : defaultBackground)
+        setBackground(attr === 'dark' || attr === 'light' ? attr : 'dark')
       }
     }, 1000)
 
@@ -82,15 +81,15 @@ function LogotypeButton({ menuState }) {
 
   return (
     <Link
-      className='flex justify-center items-center px-8 max-xl:px-0 select-none'
+      className='flex justify-center items-center select-none'
       href='/'
       onDragStart={(event) => event.preventDefault()}
     >
       <Logotype className={[
-        'h-16 transition-colors',
+        'h-16 transition-colors duration-300',
         backgroundColor === 'light' || menuState
-        ? 'fill-black'
-        : backgroundColor === 'dark' && 'fill-white',
+          ? 'fill-black'
+          : backgroundColor === 'dark' && 'fill-white',
       ].filter((n) => n).join(' ')} />
     </Link>
   )
@@ -102,15 +101,15 @@ function MenuButton({ setMenuState, menuState }) {
   return (
     <AppMenu setMenuState={setMenuState}>
       <button
-        className='flex justify-center items-center px-8 max-xl:px-0 cursor-pointer select-none'
+        className='flex justify-center items-center cursor-pointer select-none'
         onDragStart={(event) => event.preventDefault()}
       >
         <span className='text-center text-[20px] font-semibold max-xl:hidden'>{menuState ? 'Close' : 'Menu'}</span>
         <AlignCenterIcon className={[
-          'h-7 transition-colors hidden max-xl:block',
+          'h-7 transition-colors duration-300 hidden max-xl:block',
           backgroundColor === 'light' || menuState
-          ? 'fill-[#2E2E2E]'
-          : backgroundColor === 'dark' && 'fill-white',
+            ? 'fill-[#2E2E2E]'
+            : backgroundColor === 'dark' && 'fill-white',
         ].filter((n) => n).join(' ')} />
       </button>
     </AppMenu>
@@ -135,12 +134,12 @@ export default function AppHeader({ children }) {
 
   return (
     <div className={[
-      'fixed top-0 left-0 right-0 z-30 flex flex-col justify-center items-center px-16 max-xl:px-4 transition-colors',
+      'fixed top-0 left-0 right-0 z-30 flex flex-col justify-center items-center px-64 max-xl:px-6 transition-colors duration-300',
       backgroundColor === 'light' || menuState
-      ? 'text-black'
-      : backgroundColor === 'dark' && 'text-white',
+        ? 'text-black'
+        : backgroundColor === 'dark' && 'text-white',
     ].filter((n) => n).join(' ')}>
-      <header className='relative flex justify-between items-stretch max-w-[1542px] w-full h-32 max-xl:h-24'>
+      <header className='relative flex justify-between items-stretch max-w-[1920px] w-full h-32 max-xl:h-24'>
         <div className='absolute top-0 bottom-0 z-10 left-1/2 -translate-x-1/2 flex justify-center items-stretch max-xl:hidden'>
           {children}
         </div>
