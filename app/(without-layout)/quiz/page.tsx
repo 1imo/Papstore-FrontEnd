@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export default function Quiz() {
   return (
-    <div className='flex flex-col justify-between w-full min-h-screen px-[189px] max-xl:px-6 p-16 max-xl:pt-16 max-xl:pb-8'>
+    <div className='overflow-y-auto flex gap-16 flex-col justify-between w-full max-h-screen px-[189px] max-xl:px-6 p-16 max-xl:pt-16 max-xl:pb-8'>
       <div className='flex gap-33 max-xl:gap-16 flex-col justify-center items-center'>
         <div className='flex gap-16 max-xl:gap-8 flex-col justify-center items-center'>
           <div className='flex items-stretch w-full h-6 max-xl:h-4'>
