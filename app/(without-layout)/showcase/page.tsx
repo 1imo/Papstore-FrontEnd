@@ -12,16 +12,16 @@ import Icon from '@/components/Icon'
 
 export default function Quiz() {
   return (
-    <div className='flex flex-col justify-between w-full h-screen p-8'>
+    <div className='flex flex-col justify-between w-full h-screen p-8 max-xl:p-0'>
       <Link
         className='fixed top-16 left-16 z-30 max-xl:hidden'
         href='/'
       >
         <Logotype className='h-12 fill-white' />
       </Link>
-      <div className='relative size-full bg-zinc-100 rounded-[36px] rounded-br-none overflow-hidden'>
-        <div className='absolute bottom-0 right-0 z-40 w-110 h-18 bg-white rounded-tl-[36px]'>
-          <div className='size-full pt-4 pl-4'>
+      <div className='relative size-full bg-zinc-100 rounded-[36px] rounded-br-none max-xl:rounded-none overflow-hidden'>
+        <div className='absolute bottom-0 right-0 z-40 w-110 h-18 max-xl:w-screen max-xl:h-fit bg-white max-xl:bg-transparent rounded-tl-[36px] max-xl:rounded-none'>
+          <div className='size-full pt-4 max-xl:pt-0 pl-4 max-xl:px-6 max-xl:pb-6'>
             <div className='flex gap-4 justify-between items-stretch h-14 px-8 py-3 bg-[#F0F0F0] rounded-full'>
               <input
                 className='flex-1 text-[#2E2E2E] text-[17.5px] font-medium outline-none select-none placeholder:text-[#2E2E2E]'
@@ -49,7 +49,7 @@ export default function Quiz() {
           <div className='absolute bottom-0 right-110 -z-10 translate-x-1/2 translate-y-1/2 size-18 border-b-solid border-r-solid border-b-[36px] border-r-[36px] border-b-white border-r-white rounded-br-[calc(36px_+_36px)] max-xl:hidden' />
         </div>
         <div className='relative size-full'>
-          <div className='absolute top-8 left-1/2 -translate-x-1/2 z-30 flex gap-3 items-center w-149 p-4 bg-white rounded-xl select-none'>
+          <div className='absolute top-8 left-1/2 -translate-x-1/2 z-30 flex gap-3 items-center w-149 p-4 bg-white rounded-xl select-none max-xl:hidden'>
             <Icon
               name='info'
               size={24}
@@ -67,7 +67,7 @@ export default function Quiz() {
           </button>
           <div className='absolute top-0 bottom-0 left-0 right-0 z-10 flex justify-center items-center select-none'>
             <Image
-              className='h-full object-contain'
+              className='h-full object-contain max-xl:object-cover'
               alt=''
               width={2007}
               height={3048}
