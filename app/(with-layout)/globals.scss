@@ -5,6 +5,28 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  line-height: 1.6 !important;
+};
+
+/* Safari-specific styles */
+html.is-safari {
   zoom: 0.8;
-  line-height: 1.6;
+  background-color: red;
+}
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box !important;
+};
+
+.text-primary {
+  color: #005533;
+}
+
+.text-secondary {
+  color: #939393;
+}
+
+.text-main {
+  color: #2E2E2E;
 }
