@@ -24,19 +24,36 @@ export default function Home() {
         data-bg='dark'
       >
         <div className='absolute top-0 bottom-0 left-0 right-0 z-10 flex flex-col p-16 max-xl:px-0 max-xl:pt-16 max-xl:pb-7'>
-          <div className='flex flex-1 gap-32 max-xl:gap-24 flex-col justify-center items-center max-xl:items-start max-xl:px-6'>
-            <div className='flex gap-4 max-xl:gap-8 flex-col justify-center items-center max-xl:items-start text-center max-xl:text-left -translate-y-1/2'>
-              <h1 className='text-[100px] max-xl:hidden'>Time for new flooring?</h1>
-              <h2 className='text-[25px] max-xl:text-[20px] font-semibold mt-8'>We've got you covered.</h2>
+          <div className='flex flex-1 gap-8 max-xl:gap-12 flex-col justify-center items-center max-xl:items-start max-xl:px-6'>
+            <div className='flex gap-4 max-xl:gap-6 flex-col justify-center items-center max-xl:items-start text-center max-xl:text-left pt-16 max-xl:pt-8'>
+              <h1 className='text-[80px] max-xl:text-[48px] max-xl:leading-[1.1]'>Time for new flooring?</h1>
+              <h2 className='text-[20px] max-xl:text-[16px] font-semibold mt-2'>We've got you covered.</h2>
+              <div className='relative w-full max-w-[480px] mt-6'>
+                <textarea
+                  className='w-full h-[96px] p-4 pr-16 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-white/60 resize-none focus:outline-none focus:border-white/40'
+                  placeholder='Tell us about your flooring needs...'
+                />
+                <button
+                  onClick={() => window.location.href = '/api/store-query'}
+                  className='absolute bottom-4 right-4 p-3 rounded-lg bg-[#005533] hover:bg-[#004426] transition-colors flex items-center justify-center gap-2 shadow-lg'
+                >
+                  <span className='text-white text-sm font-medium'>Send</span>
+                  <Icon
+                    name='arrowRight'
+                    size={16}
+                    color='#FFFFFF'
+                  />
+                </button>
+              </div>
             </div>
-            <div className='flex gap-8 justify-center items-stretch'>
+            <div className='flex gap-8 justify-center items-stretch mt-4'>
               <Button
                 href='/#select'
                 invert={true}
               >Selection</Button>
             </div>
           </div>
-          <div className='overflow-x-auto'>
+          <div className='overflow-x-auto mt-12'>
             <div className='overflow-x-auto flex gap-12 max-xl:gap-8 justify-center max-xl:justify-start items-center max-xl:px-6'>
               <div className='flex gap-4 max-xl:gap-6 justify-center items-center select-none'>
                 <Icon
@@ -44,7 +61,7 @@ export default function Home() {
                   size={24}
                   color='#F0F0F0'
                 />
-                <p className='text-[20px] max-xl:text-[15px] font-semibold text-nowrap'>5-Star Rated on Google</p>
+                <p className='text-[16px] max-xl:text-[12px] font-semibold text-nowrap'>5-Star Rated on Google</p>
               </div>
               <div className='flex gap-4 max-xl:gap-6 justify-center items-center select-none'>
                 <Icon
@@ -52,7 +69,7 @@ export default function Home() {
                   size={24}
                   color='#F0F0F0'
                 />
-                <p className='text-[20px] max-xl:text-[15px] font-semibold text-nowrap'>Fast & Discreet Service</p>
+                <p className='text-[16px] max-xl:text-[12px] font-semibold text-nowrap'>Fast & Discreet Service</p>
               </div>
               <div className='flex gap-4 max-xl:gap-6 justify-center items-center select-none'>
                 <Icon
@@ -60,7 +77,7 @@ export default function Home() {
                   size={24}
                   color='#F0F0F0'
                 />
-                <p className='text-[20px] max-xl:text-[15px] font-semibold text-nowrap'>Climate Conscious</p>
+                <p className='text-[16px] max-xl:text-[12px] font-semibold text-nowrap'>Climate Conscious</p>
               </div>
             </div>
           </div>
@@ -82,7 +99,7 @@ export default function Home() {
         <div className='flex max-xl:flex-col flex-1 gap-8 max-xl:gap-6'>
           <div className='relative flex-1 text-white select-none max-xl:aspect-[3/2] max-xl:w-full'>
             <div className='absolute top-0 bottom-0 left-0 right-0 z-10 flex items-end px-8 max-xl:px-4 py-4 max-xl:py-2'>
-              <p className='text-[50px] max-xl:text-[40px]'>Wood</p>
+              <p className='text-[40px] max-xl:text-[32px]'>Wood</p>
             </div>
             <div className='absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center'>
               <Image
@@ -96,7 +113,7 @@ export default function Home() {
           </div>
           <div className='relative flex-1 text-white select-none max-xl:aspect-[3/2] max-xl:w-full'>
             <div className='absolute top-0 bottom-0 left-0 right-0 z-10 flex items-end px-8 max-xl:px-4 py-4 max-xl:py-2'>
-              <p className='text-[50px] max-xl:text-[40px]'>Carpet</p>
+              <p className='text-[40px] max-xl:text-[32px]'>Carpet</p>
             </div>
             <div className='absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center'>
               <Image
@@ -112,7 +129,7 @@ export default function Home() {
         <div className='flex max-xl:flex-col flex-1 gap-8 max-xl:gap-6'>
           <div className='relative flex-1 text-white select-none max-xl:aspect-[3/2] max-xl:w-full'>
             <div className='absolute top-0 bottom-0 left-0 right-0 z-10 flex items-end px-8 max-xl:px-4 py-4 max-xl:py-2'>
-              <p className='text-[50px] max-xl:text-[40px]'>Luxury Tiles & Vinyl</p>
+              <p className='text-[40px] max-xl:text-[32px]'>Luxury Tiles & Vinyl</p>
             </div>
             <div className='absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center'>
               <Image
@@ -126,7 +143,7 @@ export default function Home() {
           </div>
           <div className='relative flex-1 text-white select-none max-xl:aspect-[3/2] max-xl:w-full'>
             <div className='absolute top-0 bottom-0 left-0 right-0 z-10 flex items-end px-8 max-xl:px-4 py-4 max-xl:py-2'>
-              <p className='text-[50px] max-xl:text-[40px]'>Laminate</p>
+              <p className='text-[40px] max-xl:text-[32px]'>Laminate</p>
             </div>
             <div className='absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center'>
               <Image
@@ -146,8 +163,8 @@ export default function Home() {
         data-bg='light'
       >
         <div className='col-span-6 max-xl:col-span-12 flex flex-col gap-8 justify-start'>
-          <h1 className='text-[#005533] text-[100px] max-xl:text-[50px]'>Select</h1>
-          <p className='text-[#616161] text-[20px]'>At Papstore, we believe flooring isn't just a surface - it's the foundation of your space. That's why we take a personal approach.<br /><br />You'll be matched with your own dedicated flooring advisor, who'll help you make the right choice with confidence.<br /><br />Start by taking our quick quiz - we'll use your answers to understand your needs, and follow up with tailored advice.<br /><br />Already seen something you like elsewhere?<br /><br />Send it to us. We'll either match the price or recommend a near-identical alternative that offers better value — all without the guesswork.</p>
+          <h1 className='text-[#005533] text-[80px] max-xl:text-[40px]'>Select</h1>
+          <p className='text-[#616161] text-[16px]'>At Papstore, we believe flooring isn't just a surface - it's the foundation of your space. That's why we take a personal approach.<br /><br />You'll be matched with your own dedicated flooring advisor, who'll help you make the right choice with confidence.<br /><br />Start by taking our quick quiz - we'll use your answers to understand your needs, and follow up with tailored advice.<br /><br />Already seen something you like elsewhere?<br /><br />Send it to us. We'll either match the price or recommend a near-identical alternative that offers better value — all without the guesswork.</p>
           <div className='flex gap-8 items-stretch mt-16'>
             <Button href='/quiz'>Start Now</Button>
             <Button href='/help-center' filled={false}>Need Help?</Button>
@@ -181,7 +198,7 @@ export default function Home() {
       >
         <CarouselText label='Sample Service' />
         <div className='flex gap-32 flex-col items-center max-xl:items-start px-[256px] max-xl:px-6'>
-          <p className='max-w-149.5 text-[20px] text-main'>Work with your personal advisor to narrow down the perfect options — then we'll send your top picks straight to your door, free of charge.<br /><br />Delivered next day, so you have time to see and feel what's right in your own space.</p>
+          <p className='max-w-149.5 text-[16px] text-main'>Work with your personal advisor to narrow down the perfect options — then we'll send your top picks straight to your door, free of charge.<br /><br />Delivered next day, so you have time to see and feel what's right in your own space.</p>
           <div className='flex gap-8 justify-center max-xl:justify-start items-center max-xl:w-full'>
             <Button
               href='/quiz'
@@ -199,8 +216,8 @@ export default function Home() {
         data-bg='light'
       >
         <div className='col-span-6 max-xl:col-span-12 flex flex-col gap-8 justify-start'>
-          <h1 className='text-[#005533] text-[100px] max-xl:text-[50px]'>Deliver</h1>
-          <p className='text-[#616161] text-[20px]'>From hand-picked samples to flooring for your entire property, we make delivery simple, reliable, and stress-free.<br /><br />Whether you're refreshing a single room or renovating a whole home, we handle every order with care.<br /><br />Expect next-day dispatch, tracked couriers, and a 98% on-time delivery rate - because dependable service isn't a luxury, it's what you deserve.</p>
+          <h1 className='text-[#005533] text-[80px] max-xl:text-[40px]'>Deliver</h1>
+          <p className='text-[#616161] text-[16px]'>From hand-picked samples to flooring for your entire property, we make delivery simple, reliable, and stress-free.<br /><br />Whether you're refreshing a single room or renovating a whole home, we handle every order with care.<br /><br />Expect next-day dispatch, tracked couriers, and a 98% on-time delivery rate - because dependable service isn't a luxury, it's what you deserve.</p>
           <div className='flex gap-8 items-stretch mt-16'>
             <Button href='/quiz'>Start Now</Button>
             <Button href='/help-center' filled={false}>Need Help?</Button>
@@ -234,7 +251,7 @@ export default function Home() {
       >
         <CarouselText label='0% Finance' />
         <div className='flex gap-32 flex-col items-center max-xl:items-start px-[256px] max-xl:px-6'>
-          <p className='max-w-149.5 text-[20px] text-main'>We offer simple, interest-free finance to help spread the cost of your flooring.<br /><br />No hidden fees, no hard sell — just flexible payments that work for you.<br /><br />Ask your advisor about 0% options when you're ready.</p>
+          <p className='max-w-149.5 text-[16px] text-main'>We offer simple, interest-free finance to help spread the cost of your flooring.<br /><br />No hidden fees, no hard sell — just flexible payments that work for you.<br /><br />Ask your advisor about 0% options when you're ready.</p>
           <div className='flex gap-8 justify-center max-xl:justify-start items-center max-xl:w-full'>
             <Button
               href='/quiz'
@@ -252,8 +269,8 @@ export default function Home() {
         data-bg='light'
       >
         <div className='col-span-6 max-xl:col-span-12 flex flex-col gap-8 justify-start'>
-          <h1 className='text-[#005533] text-[100px] max-xl:text-[50px]'>Install</h1>
-          <p className='text-[#616161] text-[20px]'>Once you've chosen your floor, our specialist fitters take care of the rest - with care, precision, and minimal disruption.<br /><br />Our team works quietly and cleanly, ensuring everything is laid to last. It's all part of the service.<br /><br />Every installation is backed by a warranty⁺, so you can feel confident in both product and craftsmanship.<br /><br />Prefer to exclude  installation? Just let your advisor know when the time comes.<br /><br />⁺Warranty terms and conditions apply.</p>
+          <h1 className='text-[#005533] text-[80px] max-xl:text-[40px]'>Install</h1>
+          <p className='text-[#616161] text-[16px]'>Once you've chosen your floor, our specialist fitters take care of the rest - with care, precision, and minimal disruption.<br /><br />Our team works quietly and cleanly, ensuring everything is laid to last. It's all part of the service.<br /><br />Every installation is backed by a warranty⁺, so you can feel confident in both product and craftsmanship.<br /><br />Prefer to exclude  installation? Just let your advisor know when the time comes.<br /><br />⁺Warranty terms and conditions apply.</p>
           <div className='flex gap-8 items-stretch mt-16'>
             <Button href='/quiz'>Start Now</Button>
             <Button href='/help-center' filled={false}>Need Help?</Button>

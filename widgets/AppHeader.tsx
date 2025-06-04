@@ -86,7 +86,7 @@ function LogotypeButton({ menuState }) {
       onDragStart={(event) => event.preventDefault()}
     >
       <Logotype className={[
-        'h-16 transition-colors duration-300',
+        'h-13 transition-colors duration-300',
         backgroundColor === 'light' || menuState
           ? 'fill-black'
           : backgroundColor === 'dark' && 'fill-white',
@@ -104,9 +104,9 @@ function MenuButton({ setMenuState, menuState }) {
         className='flex justify-center items-center cursor-pointer select-none'
         onDragStart={(event) => event.preventDefault()}
       >
-        <span className='text-center text-[20px] font-semibold max-xl:hidden'>{menuState ? 'Close' : 'Menu'}</span>
+        <span className='text-center text-[16px] font-semibold max-xl:hidden'>{menuState ? 'Close' : 'Menu'}</span>
         <AlignCenterIcon className={[
-          'h-7 transition-colors duration-300 hidden max-xl:block',
+          'h-6 transition-colors duration-300 hidden max-xl:block',
           backgroundColor === 'light' || menuState
             ? 'fill-[#2E2E2E]'
             : backgroundColor === 'dark' && 'fill-white',
@@ -119,11 +119,11 @@ function MenuButton({ setMenuState, menuState }) {
 export function AppHeaderNavLink({ label, href }) {
   return (
     <Link
-      className='relative flex justify-center items-center px-8 transition-colors select-none not-last:after:content-["-"] after:absolute after:left-full after:-translate-x-1/2 after:w-2 after:text-[#005533] after:text-center after:text-[20px] after:font-medium'
+      className='relative flex justify-center items-center px-6 transition-colors select-none not-last:after:content-["-"] after:absolute after:left-full after:-translate-x-1/2 after:w-2 after:text-[#005533] after:text-center after:text-[16px] after:font-medium'
       href={href}
       onDragStart={(event) => event.preventDefault()}
     >
-      <span className='text-center text-[20px] font-medium'>{label}</span>
+      <span className='text-center text-[16px] font-medium'>{label}</span>
     </Link>
   )
 }
@@ -134,12 +134,12 @@ export default function AppHeader({ children }) {
 
   return (
     <div className={[
-      'fixed top-0 left-0 right-0 z-30 flex flex-col justify-center items-center px-64 max-xl:px-6 transition-colors duration-300',
+      'fixed top-0 left-0 right-0 z-30 flex flex-col justify-center items-center px-51 max-xl:px-5 transition-colors duration-300',
       backgroundColor === 'light' || menuState
         ? 'text-black'
         : backgroundColor === 'dark' && 'text-white',
     ].filter((n) => n).join(' ')}>
-      <header className='relative flex justify-between items-stretch max-w-[1920px] w-full h-32 max-xl:h-24'>
+      <header className='relative flex justify-between items-stretch max-w-[1920px] w-full h-26 max-xl:h-19'>
         <div className='absolute top-0 bottom-0 z-10 left-1/2 -translate-x-1/2 flex justify-center items-stretch max-xl:hidden'>
           {children}
         </div>

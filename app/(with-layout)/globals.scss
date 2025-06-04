@@ -5,14 +5,10 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
   line-height: 1.6 !important;
 };
-
-/* Safari-specific styles */
-html.is-safari {
-  zoom: 0.8;
-  background-color: red;
-}
 
 * {
   scroll-behavior: smooth;

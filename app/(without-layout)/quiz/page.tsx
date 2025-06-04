@@ -201,27 +201,27 @@ export default function Quiz() {
       )}
       {showConfetti ? (
         <div className='relative w-full h-full bg-white z-10'>
-          <div className='flex flex-col min-h-screen px-[189px] max-xl:px-6 p-16 max-xl:pt-16 max-xl:pb-8'>
-            <div className='flex gap-33 max-xl:gap-16 flex-col items-center'>
-              <div className='flex gap-16 max-xl:gap-8 flex-col items-center w-full'>
-                <div className='flex items-stretch w-[calc(100vw-512px)] max-xl:w-[calc(100vw-48px)] h-6 max-xl:h-4'>
+          <div className='flex flex-col min-h-screen px-[151px] max-xl:px-5 p-13 max-xl:pt-13 max-xl:pb-6'>
+            <div className='flex gap-26 max-xl:gap-13 flex-col items-center'>
+              <div className='flex gap-13 max-xl:gap-6 flex-col items-center w-full'>
+                <div className='flex items-stretch w-[calc(100vw-410px)] max-xl:w-[calc(100vw-38px)] h-5 max-xl:h-3'>
                   <div className='w-full bg-[#005533] rounded-full' />
                 </div>
-                <div className={`flex gap-8 flex-col items-center text-center max-xl:text-left transition-all duration-500 ${showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                  <p className='text-[#005533] text-[100px] max-xl:text-[50px]'>Congrats!</p>
-                  <p className='text-[#939393] text-[22.5px] max-xl:text-[20px]'>The best floor types for you are:</p>
+                <div className={`flex gap-6 flex-col items-center text-center max-xl:text-left transition-all duration-500 ${showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                  <p className='text-[#005533] text-[80px] max-xl:text-[40px]'>Congrats!</p>
+                  <p className='text-[#939393] text-[18px] max-xl:text-[16px]'>The best floor types for you are:</p>
                 </div>
               </div>
-              <div className={`flex flex-col gap-12 w-full max-w-[800px] transition-all duration-500 delay-300 ${showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <div className={`flex flex-col gap-10 w-full max-w-[640px] transition-all duration-500 delay-300 ${showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                 {getRecommendedFloors().map((floor) => (
-                  <div key={floor} className='flex flex-col gap-4'>
-                    <h3 className='text-[#005533] text-[50px] max-xl:text-[30px] font-semibold'>{floor}</h3>
-                    <p className='text-[#939393] text-[20px] max-xl:text-[16px]'>
+                  <div key={floor} className='flex flex-col gap-3'>
+                    <h3 className='text-[#005533] text-[40px] max-xl:text-[24px] font-semibold'>{floor}</h3>
+                    <p className='text-[#939393] text-[16px] max-xl:text-[13px]'>
                       {getFloorDescription(floor)}
                     </p>
                     <Link
                       href='#'
-                      className='text-[#005533] text-[20px] max-xl:text-[16px] hover:underline'
+                      className='text-[#005533] text-[16px] max-xl:text-[13px] hover:underline'
                     >
                       Read more
                     </Link>
@@ -229,7 +229,7 @@ export default function Quiz() {
                 ))}
               </div>
             </div>
-            <div className='flex gap-8 justify-center items-center mt-16 px-[256px] max-xl:px-[128px]'>
+            <div className='flex gap-6 justify-center items-center mt-13 px-[205px] max-xl:px-[102px]'>
               <button
                 onClick={() => {
                   setShowConfetti(false)
@@ -237,63 +237,63 @@ export default function Quiz() {
                   setCurrentStep(0)
                   setAnswers({})
                 }}
-                className='flex justify-center items-center px-8 py-3 bg-[#F0F0F0] rounded-full cursor-pointer'
+                className='flex justify-center items-center px-6 py-2 bg-[#F0F0F0] rounded-full cursor-pointer'
               >
-                <span className='text-[20px] text-center'>Retake</span>
+                <span className='text-[16px] text-center'>Retake</span>
               </button>
               <button
                 onClick={() => router.push('/contact')}
-                className='flex justify-center items-center px-8 py-3 bg-[#005533] text-white rounded-full cursor-pointer'
+                className='flex justify-center items-center px-6 py-2 bg-[#005533] text-white rounded-full cursor-pointer'
               >
-                <span className='text-[20px] text-center font-semibold'>Questions?</span>
+                <span className='text-[16px] text-center font-semibold'>Questions?</span>
               </button>
             </div>
           </div>
         </div>
       ) : (
-        <div className='flex flex-col min-h-screen px-[189px] max-xl:px-6 p-16 max-xl:pt-16 max-xl:pb-8'>
-          <div className='flex gap-33 max-xl:gap-16 flex-col justify-center items-center'>
-            <div className='flex gap-16 max-xl:gap-8 flex-col justify-center items-center w-full'>
-              <div className='flex items-stretch w-[calc(100vw-512px)] max-xl:w-[calc(100vw-48px)] h-6 max-xl:h-4'>
+        <div className='flex flex-col min-h-screen px-[151px] max-xl:px-5 p-13 max-xl:pt-13 max-xl:pb-6'>
+          <div className='flex gap-26 max-xl:gap-13 flex-col justify-center items-center'>
+            <div className='flex gap-13 max-xl:gap-6 flex-col justify-center items-center w-full'>
+              <div className='flex items-stretch w-[calc(100vw-410px)] max-xl:w-[calc(100vw-38px)] h-5 max-xl:h-3'>
                 <div
                   className='bg-[#005533] rounded-full transition-all duration-500 ease-in-out'
                   style={{ width: `${progress}%` }}
                 />
                 <div className='flex-1 bg-[#F0F0F0] rounded-full' />
               </div>
-              <div className='flex gap-8 flex-col justify-center items-center text-center max-xl:text-left'>
-                <p className='text-[#005533] text-[100px] max-xl:text-[50px]'>{questions[currentStep].title}</p>
-                <p className='text-[#939393] text-[22.5px] max-xl:text-[20px]'>Select at least one option and input further details here if required</p>
+              <div className='flex gap-6 flex-col justify-center items-center text-center max-xl:text-left'>
+                <p className='text-[#005533] text-[80px] max-xl:text-[40px]'>{questions[currentStep].title}</p>
+                <p className='text-[#939393] text-[18px] max-xl:text-[16px]'>Select at least one option and input further details here if required</p>
               </div>
             </div>
-            <div className='flex flex-wrap gap-x-4 gap-y-8 justify-center max-xl:justify-start items-center w-full max-w-[800px] max-xl:mb-16'>
+            <div className='flex flex-wrap gap-x-4 gap-y-8 justify-center max-xl:justify-start items-center w-full max-w-[640px] max-xl:mb-16'>
               {questions[currentStep].options.map((option) => (
                 <button
                   key={option}
                   onClick={() => handleOptionClick(option)}
-                  className={`flex justify-center items-center px-8 py-3 rounded-full cursor-pointer transition-all duration-300 ${(answers[currentStep] || []).includes(option)
+                  className={`flex justify-center items-center px-6 py-2 rounded-full cursor-pointer transition-all duration-300 ${(answers[currentStep] || []).includes(option)
                     ? 'bg-[#005533] text-white'
                     : 'bg-[#F0F0F0]'
                     }`}
                 >
-                  <span className={`text-[20px] text-center ${(answers[currentStep] || []).includes(option) ? 'font-semibold' : ''}`}>
+                  <span className={`text-[16px] text-center ${(answers[currentStep] || []).includes(option) ? 'font-semibold' : ''}`}>
                     {option}
                   </span>
                 </button>
               ))}
             </div>
           </div>
-          <div className='xl:fixed xl:bottom-0 xl:left-0 xl:right-0 bg-white px-[189px] max-xl:px-6 py-8'>
-            <div className='flex gap-16 max-xl:gap-10 flex-col'>
-              <p className='text-[#939393] text-[20px] max-xl:text-[15px] text-center'>
+          <div className='xl:fixed xl:bottom-0 xl:left-0 xl:right-0 bg-white px-[151px] max-xl:px-5 py-6'>
+            <div className='flex gap-13 max-xl:gap-10 flex-col'>
+              <p className='text-[#939393] text-[16px] max-xl:text-[13px] text-center'>
                 Click to speak and enter further information <Link className='text-[#005533]' href='#'>here</Link>
               </p>
               <div className='flex gap-[32px] justify-center items-center'>
                 <button
                   onClick={handleBack}
-                  className='flex justify-center items-center px-8 py-3 bg-[#F0F0F0] rounded-full cursor-pointer'
+                  className='flex justify-center items-center px-6 py-2 bg-[#F0F0F0] rounded-full cursor-pointer'
                 >
-                  <span className='text-[20px] text-center'>Back</span>
+                  <span className='text-[16px] text-center'>Back</span>
                 </button>
                 <button
                   onClick={() => {
@@ -304,10 +304,10 @@ export default function Quiz() {
                     }
                   }}
                   disabled={!answers[currentStep]?.length || isSubmitting}
-                  className={`flex justify-center items-center px-8 py-3 rounded-full cursor-pointer ${!answers[currentStep]?.length || isSubmitting ? 'bg-[#E0E0E0] cursor-not-allowed' : 'bg-[#005533] text-white'
+                  className={`flex justify-center items-center px-6 py-2 rounded-full cursor-pointer ${!answers[currentStep]?.length || isSubmitting ? 'bg-[#E0E0E0] cursor-not-allowed' : 'bg-[#005533] text-white'
                     }`}
                 >
-                  <span className='text-[20px] text-center font-semibold'>
+                  <span className='text-[16px] text-center font-semibold'>
                     {currentStep === questions.length - 1 ? (isSubmitting ? 'Submitting...' : 'Finish') : 'Continue'}
                   </span>
                 </button>
